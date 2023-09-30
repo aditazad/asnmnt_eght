@@ -71,7 +71,6 @@ class PortraitLayout extends StatelessWidget {
           ),
           itemCount: 15,
           shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.all(8.0),
@@ -92,9 +91,9 @@ class LandscapeLayout extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           AspectRatio(
-            aspectRatio: 1.0,
+            aspectRatio: 1.3,
             child: CircleAvatar(
-              backgroundImage: NetworkImage('https://example.com/profile_image.jpg'),
+              backgroundImage: NetworkImage('https://images.unsplash.com/photo-1546805022-9c4e4ab7e3a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZHNsciUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'),
             ),
           ),
           SizedBox(height: 16.0),
@@ -111,7 +110,7 @@ class LandscapeLayout extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer turpis elit, tempus nec dui quis, ultricies mollis risus. Vestibulum placerat nibh id justo condimentum, vitae ultricies ligula sagittis.',
               textAlign: TextAlign.center,
             ),
           ),
@@ -121,11 +120,10 @@ class LandscapeLayout extends StatelessWidget {
             ),
             itemCount: 15,
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.network('https://example.com/image_$index.jpg'),
+                child: Image.network('https://images.unsplash.com/photo-1598469701566-59655353deb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHNsciUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'),
               );
             },
           ),
